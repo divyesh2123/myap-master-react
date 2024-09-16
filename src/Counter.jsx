@@ -14,11 +14,17 @@ export default function Counter() {
         dis({type:'Counter_ASYC'})
     }
 
-  return (
-    <div>{count}
+    if(count ==3)
+    {
+  return  Error("This is the error")
 
-        <button onClick={inccremet}>+</button>
-        <button>-</button>
-    </div>
-  )
+}
+else
+{
+  return ( <div>{count }
+
+    <button onClick={inccremet}>+</button>
+    <button>-</button>
+</div>)
+}
 }

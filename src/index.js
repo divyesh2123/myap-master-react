@@ -7,13 +7,16 @@ import Counter from './Counter';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import User from './User';
+import ErrorBoundary from './ErrorBoundary';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+      <ErrorBoundary>
     <Counter />
     <User/>
+    </ErrorBoundary>
     </Provider>
    
   </React.StrictMode>
